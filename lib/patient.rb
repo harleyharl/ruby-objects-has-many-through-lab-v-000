@@ -9,9 +9,8 @@ class Patient
   end
 
   def appointments
-    Appointment.all.collect do |appointment|
-      binding.pry
-      if self == appointment.patient
+    Appointment.all.select do |appointment|
+      self == appointment.patient
      end
   end
 
