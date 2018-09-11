@@ -1,7 +1,4 @@
 class Patient
-
-  require 'pry'
-
   # attr_accessor :appointments
 
   @@all = []
@@ -14,7 +11,7 @@ class Patient
   def appointments
     Appointment.all.collect do |appointment|
       binding.pry
-      self.appointment
+      appointment
      end
   end
 
