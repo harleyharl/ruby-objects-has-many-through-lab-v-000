@@ -1,5 +1,7 @@
 class Patient
 
+  require 'pry'
+
   # attr_accessor :appointments
 
   @@all = []
@@ -17,7 +19,7 @@ class Patient
   end
 
   def new_appointment(doctor, date)
-    @appointments << Appointment.new(self, doctor, date)
+    Appointment.new(self, doctor, date)
   end
 
 end
