@@ -10,8 +10,9 @@ class Patient
   end
 
   def appointments
-    binding.pry 
-    Appointment.all.collect { |appointment| self.appointment }
+    Appointment.all.collect {  |appointment|
+      binding.pry
+      self.appointment }
   end
 
   def new_appointment(doctor, date)
