@@ -11,7 +11,7 @@ class Patient
   def appointments
     Appointment.all.collect do |appointment|
       binding.pry
-      if self.name == appointment.patient.name
+      if self == appointment.patient
      end
   end
 
